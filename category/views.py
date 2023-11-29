@@ -30,7 +30,6 @@ def get_category_products(request, slug):
     category_products = Product.objects.filter(category__in=descendants)
 
     context = {
-
         'categories': categories[0],
         'category_products': category_products,
     }

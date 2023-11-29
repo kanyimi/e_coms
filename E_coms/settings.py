@@ -92,9 +92,9 @@ DATABASES = {
     }
 }
 
-# POSTGRES_LOCALLY = False
-# if ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:
-DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))
+POSTGRES_LOCALLY = False
+if ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:
+    DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -128,8 +128,8 @@ STATICFILES_DIRS = [
 
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+MEDIA_URL = '/images/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

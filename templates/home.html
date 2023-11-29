@@ -87,6 +87,15 @@ ul.thumb li img{
   box-shadow: 16px 13px 40px #0a0000;
 
   }
+  .store1 {
+ background-color: rgba(47, 54, 54, 0.57);
+  margin: 10px 10px;
+  border-radius: 30px;
+  padding: 5px;
+  height: auto;
+  box-shadow: 16px 13px 40px #0a0000;
+
+  }
 
     </style>
 <html>
@@ -143,7 +152,7 @@ ul.thumb li img{
         <div class="row">
           {% for product in products %}
           <div class="col-md-3">
-            <div class="card card-product-grid store">
+            <div class="card card-product-grid store1">
               <a href="{{ product.get_url }}" class="img-wrap">
                 <img src="{{ product.images.url }}" style="border-radius: 30px;" alt="">
               </a>

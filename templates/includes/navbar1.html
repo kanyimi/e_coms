@@ -51,9 +51,9 @@
                     <a href="{% url 'register' %}" style="display: inline-block;">Register</a>
                 </div>
             {% else %}
-                <small class="title text-muted">Welcome {{user.first_name}}!
+                <div class="title text-muted">Welcome {{user.first_name}}!
                     <img src="{{userprofile.profile_picture.url}}" alt="" width="25" height="25" style="border-radius:50%;">
-                </small>
+                </div>
                 <div>
                     <a href="{% url 'dashboard' %}" class="mr-2" style="display: inline-block;">Dashboard</a>
                     <a href="{% url 'logout' %}" style="display: inline-block;">Logout</a>

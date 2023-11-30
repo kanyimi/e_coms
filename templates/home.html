@@ -157,7 +157,7 @@ ul.thumb li img{
                 <img src="{{ product.images.url }}" style="border-radius: 30px;" alt="{{product.product_name}}'s picture">
               </a>
               <figcaption class="info-wrap">
-                <a href="{{ product.get_url }}" class="title">{{product.product_name}}</a>
+                <a href="{{ product.get_url }}" class="title">{{product.product_name}}
                 <div class="price mt-1">${{product.price}}</div>
                 <!-- price-wrap.// -->
                 <div class="rating-star">
@@ -169,6 +169,7 @@ ul.thumb li img{
 						<i class="fa fa-star{% if product.averageReview < 4.5 %}-o{% elif product.averageReview >= 4.5 and product.averageReview < 5 %}-half-o {% endif %}" aria-hidden="true"></i>
 						</span>
 				</div>
+                    </a>
               </figcaption>
             </div>
           </div>

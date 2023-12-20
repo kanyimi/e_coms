@@ -67,6 +67,7 @@ TEMPLATES = [
                 'category.context_processors.menu_links',
                 'category.context_processors.categories',
                 'carts.context_processors.counter',
+                'accounts.context_processors.profile_picture',
             ],
         },
     },
@@ -132,7 +133,7 @@ STATICFILES_DIRS = [
 
 
 MEDIA_URL = '/images/'
-if ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True: 
+if ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:
     DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 else:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
